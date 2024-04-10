@@ -31,7 +31,7 @@ jobs:
     - name: Run security Tests
       run: npm run test-npm-security
     - name: Audit fix force
-      run: npm run audit fix --force
+      run: npm audit fix --force
 
   test-integration:
     needs: test-security
