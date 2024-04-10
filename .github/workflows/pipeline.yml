@@ -2,7 +2,7 @@ name: Build and Test
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "testing-branch" ]
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
@@ -30,6 +30,8 @@ jobs:
       run: npm test
     - name: Run security Tests
       run: npm run test-npm-security
+    - name: Audit fix force
+      run: npm run audit fix --force
 
   test-integration:
     needs: test-security
