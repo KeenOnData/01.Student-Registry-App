@@ -28,7 +28,7 @@ jobs:
     - name: run integration tests
       run: npm test
     - name: Run security Tests
-      run: npm run test-npm-security
+      run: npm test-npm-security
     
   test-integration:
     needs: test-security
